@@ -53,7 +53,7 @@ function TicketList() {
           <Ticket key={ticket.id}>
             <Box>
               <h3>{"Ticket ID: "+ticket.id}</h3>
-              <h3>{"Price: "+ticket.price}</h3>
+              <h3>{"Price: $"+ticket.price}</h3>
               <h3>{"Train: "+ticket.train.title}</h3>
               <h3>{"Train ID: "+ticket.train.id}</h3>
               <h3>{"User: "+ticket.user.username}</h3>

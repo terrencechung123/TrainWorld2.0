@@ -34,12 +34,13 @@ const TrainList = () => {
 
     return (
         <Wrapper>
+        <h1>Trains</h1>
             {trains.length > 0 ? (
                 trains.map((train) => (
                     <Train key={train.id}>
                         <Box>
-                            <h2>{"Train"}</h2>
-                            <h2>{"Title: "+train.title}</h2>
+                            <h2>{"Train ID: "+train.id}</h2>
+                            <h2>{"Name: "+train.title}</h2>
                             <h2>{train.description}</h2>
                             <img src={train.image_url}/>
                             <div>

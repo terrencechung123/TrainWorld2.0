@@ -45,15 +45,19 @@ function TicketList() {
 
 
   return (
+
     <Wrapper>
+    <h1>Tickets</h1>
       {tickets.length > 0 ? (
         tickets.map((ticket) => (
           <Ticket key={ticket.id}>
             <Box>
-              <h2>{"Ticket"}</h2>
+              <h2>{"Ticket ID: "+ticket.id}</h2>
               <h2>{"Price: "+ticket.price}</h2>
               <h2>{"Train: "+ticket.train.title}</h2>
+              <h2>{"Train ID: "+ticket.train.id}</h2>
               <h2>{"User: "+ticket.user.username}</h2>
+              <h2>{"User ID: "+ticket.user.id}</h2>
               <Button onClick={() => handleDeleteTicket(ticket.id)}>
                 Delete ticket
               </Button>

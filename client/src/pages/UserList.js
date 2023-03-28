@@ -14,13 +14,14 @@ function UserList() {
         },[])
     return (
         <Wrapper>
+        <h1>Users</h1>
             {users.length > 0 ? (
                 users.map((user) => (
                 <User key={user.id}>
                     <Box>
-                    <h2>{"User"}</h2>
-                    <h2>{"Username: "+user.username}</h2>
-                    <h2>{"Image: "+user.image_url}</h2>
+                    <h2>{"User ID: "+user.id}</h2>
+                    <h2>{"Name: "+user.username}</h2>
+                    <img src={user.image_url}/>
                     <h2>{"Bio: "+user.bio}</h2>
                     {/* <h2>{"User Train: "+user.train}</h2> */}
                     {/* <h2>{"User: "+user.ticket}</h2>

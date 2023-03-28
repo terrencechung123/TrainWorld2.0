@@ -31,7 +31,7 @@ class Signup(Resource):
             db.session.commit()
             session['user_id'] = user.id
             print(user.to_dict())
-            return user.to_dict(), 201
+            return make_response(user.to_dict(), 201)
         except IntegrityError:
             print('no, no, no, no')
             return {'error': '422 Unprocessable Entity'}, 422

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Button, Error, Input, FormField, Label } from "../styles";
 import styled from "styled-components";
+import { useFormik } from "formik";
+import * as yup from "yup";
 
 const CustomLabel = styled.label`
   color: #4E79D4;
@@ -32,6 +34,44 @@ function LoginForm({ onLogin }) {
       }
     });
   }
+
+
+  const validationSchema = yup.object({
+    username: yup.string().required(),
+    password: yup.string().required(),
+  })
+
+
+  const formik = useFormik({
+    initialValues: {
+      username: "",
+      password: "",
+    },
+
+    validationSchema,
+    onSubmit: (values, { setErrors, setSubmitting }) => {
+      setSubmitting(true);
+      fetch("/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      })
+      .then((r) => {
+        setSubmitting(false);
+        if (r.ok) {
+          r.json.then((user) => onLogin(user))
+        }
+      })
+    }
+  })
+
+
+
+
+
+
 
   return (
     <form onSubmit={handleSubmit}>

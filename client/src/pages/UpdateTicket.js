@@ -49,7 +49,7 @@ function UpdateTicket({ user }) {
     }).then((response) => {
       setIsLoading(false);
       if (response.ok) {
-        history.push("/");
+        history.push("/tickets");
       } else {
         response.json().then((err) => setErrors(err.errors));
       }

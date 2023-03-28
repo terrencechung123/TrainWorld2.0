@@ -52,15 +52,15 @@ function TicketList() {
         tickets.map((ticket) => (
           <Ticket key={ticket.id}>
             <Box>
-              <h2>{"Ticket ID: "+ticket.id}</h2>
-              <h2>{"Price: "+ticket.price}</h2>
-              <h2>{"Train: "+ticket.train.title}</h2>
-              <h2>{"Train ID: "+ticket.train.id}</h2>
-              <h2>{"User: "+ticket.user.username}</h2>
-              <h2>{"User ID: "+ticket.user.id}</h2>
-              <Button onClick={() => handleDeleteTicket(ticket.id)}>
-                Delete ticket
-              </Button>
+              <h3>{"Ticket ID: "+ticket.id}</h3>
+              <h3>{"Price: "+ticket.price}</h3>
+              <h3>{"Train: "+ticket.train.title}</h3>
+              <h3>{"Train ID: "+ticket.train.id}</h3>
+              <h3>{"User: "+ticket.user.username}</h3>
+              <h3>{"User ID: "+ticket.user.id}</h3>
+              <Button onClick={() => handleDeleteTicket(ticket.id)} style={{marginRight: "10px", backgroundColor: "indigo", color: "white"}}>
+  Delete ticket
+</Button>
               <Button as={Link} to={`/update/${ticket.id}/edit`}>
           Update Ticket
         </Button>
@@ -75,7 +75,7 @@ function TicketList() {
         ))
       ) : (
         <>
-          <h2>No Tickets Found</h2>
+          <h3>No Tickets Found</h3>
           <Button as={Link} to="/new_ticket">
             Make a New Ticket
           </Button>
@@ -92,6 +92,7 @@ const Wrapper = styled.section`
 
 const Ticket = styled.article`
   margin-bottom: 24px;
+  margin-right: 10px;
 `;
 
 export default TicketList;

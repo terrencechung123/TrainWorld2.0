@@ -19,10 +19,10 @@ function UserList() {
                 users.map((user) => (
                 <User key={user.id}>
                     <Box>
-                    <h2>{"User ID: "+user.id}</h2>
-                    <h2>{"Name: "+user.username}</h2>
+                    <h3>{"User ID: "+user.id}</h3>
+                    <h3>{"Name: "+user.username}</h3>
                     <Image src={user.image_url}/>
-                    <h2>{"Bio: "+user.bio}</h2>
+                    <h3>{"Bio: "+user.bio}</h3>
                     {/* <h2>{"User Train: "+user.train}</h2> */}
                     {/* <h2>{"User: "+user.ticket}</h2>
                     <ReactMarkdown>{user.description}</ReactMarkdown> */}
@@ -31,7 +31,7 @@ function UserList() {
                 ))
             ) : (
                 <>
-                <h2>No Users Found</h2>
+                <h3>No Users Found</h3>
                 <Button as={Link} to="/tickets">
                     Go home
                 </Button>

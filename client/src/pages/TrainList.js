@@ -39,9 +39,9 @@ const TrainList = () => {
                 trains.map((train) => (
                     <Train key={train.id}>
                         <Box>
-                            <h2>{"Train ID: "+train.id}</h2>
-                            <h2>{"Name: "+train.title}</h2>
-                            <h2>{train.description}</h2>
+                            <h3>{"Train ID: "+train.id}</h3>
+                            <h3>{"Name: "+train.title}</h3>
+                            <h3>{train.description}</h3>
                             <Image src={train.image_url}/>
                             <div>
                             <Button onClick={() => handleDeleteTrain(train.id)}>
@@ -53,7 +53,7 @@ const TrainList = () => {
                 ))
             ) : (
                     <>
-                    <h2>No Trains Found</h2>
+                    <h3>No Trains Found</h3>
                     <Button as={Link} to="/new_train">
                         Make a New Train
                     </Button>

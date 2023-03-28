@@ -5,18 +5,21 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 
 
+
 function SignUpForm({ onLogin }) {
+ 
   
-  console.log("fuck")
   const validationSchema = yup.object({
     username: yup.string().required(),
     password: yup.string().required(),
-    passwordConfirmation: yup.string(),
+    passwordConfirmation: yup
+      .string()
+      .oneOf([yup.ref("password"), null], "Passwords must match")
+      .required(),
     imageUrl: yup.string().required(),
     bio: yup.string().required(),
   });
-  
-  console.log("fuck fuck")
+
 
 
   const formik = useFormik({
@@ -28,24 +31,30 @@ function SignUpForm({ onLogin }) {
       bio: "",
     },
     validationSchema,
-    onSubmit: (values) => {
+    onSubmit: (values, { setErrors, setSubmitting }) => {
+      setSubmitting(true);
       fetch("/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(values, null, 2),
+        body: JSON.stringify(values),
       })
         .then((r) => {
+          setSubmitting(false);
           if (r.ok) {
-            r.json().then((user) =>  onLogin(user), console.log("fuck fuck fuck"));
-          } 
+            r.json().then((user) => onLogin(user));
+          } else {
+            r.json().then((err) => setErrors(err.errors));
+
+          }
         })
+        .catch((error) => {
+          setSubmitting(false);
+          console.error(error);
+        });
     },
   });
-
-
-  console.log("mayday, mayday, please send help")
 
   return (
     <form onSubmit={formik.handleSubmit}>
@@ -70,7 +79,7 @@ function SignUpForm({ onLogin }) {
         />
       </FormField>
       <FormField>
-        <Label htmlFor="passwordConfirmation">Password Confirmation</Label>
+        <Label htmlFor="passwordcConfirmation">Password Confirmation</Label>
         <Input
           type="password"
           id="passwordConfirmation"

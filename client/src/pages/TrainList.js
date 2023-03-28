@@ -42,7 +42,7 @@ const TrainList = () => {
                             <h2>{"Train ID: "+train.id}</h2>
                             <h2>{"Name: "+train.title}</h2>
                             <h2>{train.description}</h2>
-                            <img src={train.image_url}/>
+                            <Image src={train.image_url}/>
                             <div>
                             <Button onClick={() => handleDeleteTrain(train.id)}>
                                 Delete train
@@ -71,6 +71,12 @@ const Wrapper = styled.section`
 
 const Train = styled.article`
     margin-bottom: 24px;
+`;
+
+const Image = styled.img`
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
 `;
 
 export default TrainList

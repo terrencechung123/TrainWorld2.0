@@ -21,7 +21,7 @@ function UserList() {
                     <Box>
                     <h2>{"User ID: "+user.id}</h2>
                     <h2>{"Name: "+user.username}</h2>
-                    <img src={user.image_url}/>
+                    <Image src={user.image_url}/>
                     <h2>{"Bio: "+user.bio}</h2>
                     {/* <h2>{"User Train: "+user.train}</h2> */}
                     {/* <h2>{"User: "+user.ticket}</h2>
@@ -47,4 +47,11 @@ const Wrapper = styled.section`
 const User = styled.article`
     margin-bottom: 24px;
 `;
+
+const Image = styled.img`
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+`;
+
 export default UserList;

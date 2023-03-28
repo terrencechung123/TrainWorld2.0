@@ -12,29 +12,6 @@ function NewTicket({ user }) {
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
-
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-  //   setIsLoading(true);
-  //   fetch("/tickets", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       price: price,
-  //       train_id: trainId,
-  //       user_id: userId,
-  //     }),
-  //   }).then((r) => {
-  //     setIsLoading(false);
-  //     if (r.ok) {
-  //       history.push("/");
-  //     } else {
-  //       r.json().then((err) => setErrors(err.errors));
-  //     }
-  //   });
-  // }
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);

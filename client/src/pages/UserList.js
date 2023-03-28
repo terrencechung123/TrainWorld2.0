@@ -32,7 +32,7 @@ function UserList() {
             ) : (
                 <>
                 <h2>No Users Found</h2>
-                <Button as={Link} to="/">
+                <Button as={Link} to="/tickets">
                     Go home
                 </Button>
                 </>

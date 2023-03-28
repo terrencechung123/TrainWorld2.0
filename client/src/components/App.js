@@ -37,13 +37,13 @@ function App() {
           <Route path="/new_train">
             <NewTrain/>
           </Route>
-          <Route path="/new">
+          <Route path="/new_ticket">
             <NewTicket user={user} />
           </Route>
           <Route path="/update/:id/edit">
             <UpdateTicket user={user}/>
           </Route>
-          <Route path="/">
+          <Route path="/tickets">
             <TicketList />
           </Route>
         </Switch>

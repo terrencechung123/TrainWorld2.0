@@ -38,7 +38,7 @@ function NewTrain() {
         }).then((r) => {
             setIsLoading(false);
             if (r.ok) {
-                history.push("/");
+                history.push("/tickets");
             } else {
                 r.json().then((err) => setErrors(err.errors));
             }

@@ -76,7 +76,7 @@ function TicketList() {
       ) : (
         <>
           <h2>No Tickets Found</h2>
-          <Button as={Link} to="/new">
+          <Button as={Link} to="/new_ticket">
             Make a New Ticket
           </Button>
         </>

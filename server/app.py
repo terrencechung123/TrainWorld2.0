@@ -42,6 +42,7 @@ class CheckSession(Resource):
             user = User.query.filter(User.id == session['user_id']).first()
             return user.to_dict(), 200
         return {'error': '401 Unauthorized'}, 401
+api.add_resource(CheckSession, '/check_session', endpoint='check_session')
 
 class Login(Resource):
     def post(self):
@@ -254,7 +255,6 @@ api.add_resource(UserById, "/users/<int:id>")
 api.add_resource(Users,'/users')
 api.add_resource(Tickets, '/tickets')
 api.add_resource(Signup, '/signup', endpoint='signup')
-api.add_resource(CheckSession, '/check_session', endpoint='check_session')
 api.add_resource(Login, '/login', endpoint='login')
 api.add_resource(Logout, '/logout', endpoint='logout')
 api.add_resource(TicketIndex, '/ticket_index', endpoint='ticket_index')

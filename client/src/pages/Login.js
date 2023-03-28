@@ -38,7 +38,7 @@ function Login({ onLogin }) {
 }
 
 const Logo = styled.h1`
-  font-family: "Permanent Marker", cursive;
+  font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
   color: #4E79D4;
   margin: 8px 0 16px;

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from flask import request, session, make_response
+from flask import request, session, make_response, abort
 from flask_restful import Resource
 from sqlalchemy.exc import IntegrityError
 from flask_login import current_user
@@ -26,23 +26,34 @@ class Signup(Resource):
         user.password_hash = password
         print('first')
         try:
-            print('here!')
+            print('working')
             db.session.add(user)
             db.session.commit()
             session['user_id'] = user.id
             print(user.to_dict())
             return user.to_dict(), 201
         except IntegrityError:
-            print('no, here!')
+            print('no, no, no, no')
             return {'error': '422 Unprocessable Entity'}, 422
+
+
+
 
 class CheckSession(Resource):
     def get(self):
-        if session.get('user_id'):
-            user = User.query.filter(User.id == session['user_id']).first()
-            return user.to_dict(), 200
-        return {'error': '401 Unauthorized'}, 401
+        try:
+            user = User.query.filter_by(id=session['user_id']).first()
+            response = make_response(
+                user.to_dict(),
+                200
+            )
+            return response
+        except:
+            abort(401, "Unauthorized")
 api.add_resource(CheckSession, '/check_session', endpoint='check_session')
+
+
+
 
 class Login(Resource):
     def post(self):
@@ -103,20 +114,7 @@ class TicketById(Resource):
         response = make_response(ticket_dict, 200)
         return response
 
-    # def patch(self, id):
-    #     ticket = Ticket.query.filter_by(id=id).first()
 
-    #     data = request.get_json()
-    #     for attr in data:
-    #             setattr(ticket, attr, data[attr])
-
-    #             db.session.add(ticket)
-    #             db.session.commit()
-
-    #             return make_response(
-    #                 ticket.to_dict(),
-    #                 202
-    #             )
     def patch(self, id):
         ticket = Ticket.query.filter_by(id=id).first()
 

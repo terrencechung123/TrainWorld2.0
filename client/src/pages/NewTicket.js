@@ -46,7 +46,7 @@ function NewTicket({ user }) {
   return (
     <Wrapper>
       <WrapperChild>
-        <h2>Create Ticket</h2>
+        <h1 style={{ fontSize: "2rem", fontFamily: "'Press Start 2P', cursive" }}>Create Ticket</h1>
         <form onSubmit={handleSubmit}>
           <FormField>
             <Label htmlFor="price">Price</Label>

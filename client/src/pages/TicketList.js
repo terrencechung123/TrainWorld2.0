@@ -47,7 +47,7 @@ function TicketList() {
   return (
 
     <Wrapper>
-    <h1>Tickets</h1>
+    <h1 style={{ fontSize: "2rem", fontFamily: "'Press Start 2P', cursive" }}>Tickets</h1>
       {tickets.length > 0 ? (
         tickets.map((ticket) => (
           <Ticket key={ticket.id}>

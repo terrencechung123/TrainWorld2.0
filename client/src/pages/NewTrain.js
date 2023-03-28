@@ -48,7 +48,7 @@ function NewTrain() {
   return (
     <Wrapper>
       <WrapperChild>
-        <h2>Create Train</h2>
+        <h1 style={{ fontSize: "2rem", fontFamily: "'Press Start 2P', cursive" }}>Create Train</h1>
         <form onSubmit={handleSubmit}>
           <FormField>
             <Label htmlFor="title">Title</Label>

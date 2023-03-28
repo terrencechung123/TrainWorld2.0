@@ -34,7 +34,7 @@ const TrainList = () => {
 
     return (
         <Wrapper>
-        <h1>Trains</h1>
+        <h1 style={{ fontSize: "2rem", fontFamily: "'Press Start 2P', cursive" }}>Trains</h1>
             {trains.length > 0 ? (
                 trains.map((train) => (
                     <Train key={train.id}>

@@ -14,7 +14,7 @@ function UserList() {
         },[])
     return (
         <Wrapper>
-        <h1>Users</h1>
+        <h1 style={{ fontSize: "2rem", fontFamily: "'Press Start 2P', cursive" }}>Users</h1>
             {users.length > 0 ? (
                 users.map((user) => (
                 <User key={user.id}>

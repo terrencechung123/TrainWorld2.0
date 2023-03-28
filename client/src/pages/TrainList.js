@@ -6,13 +6,19 @@ import { Box, Button } from "../styles";
 const TrainList = () => {
     const [trains, setTrains] = useState([]);
 
-    useEffect(()=>{
-        fetch("/trains").then((r)=>{
-            if (r.ok){
-                r.json().then((trains)=>setTrains(trains));
-            }
-        })
-    },[])
+    // useEffect(()=>{
+    //     fetch("/trains").then((r)=>{
+    //         if (r.ok){
+    //             r.json().then((trains)=>setTrains(trains));
+    //         }
+    //     })
+    // },[])
+    useEffect(() => {
+        fetch("/trains")
+        .then((r) => r.json())
+        .then(setTrains);
+    }, []);
+
 
     function handleDeleteTrain(id) {
         fetch(`/trains/${id}`, {
@@ -47,7 +53,7 @@ const TrainList = () => {
             ) : (
                     <>
                     <h2>No Trains Found</h2>
-                    <Button as={Link} to="/new">
+                    <Button as={Link} to="/new_train">
                         Make a New Train
                     </Button>
                     </>

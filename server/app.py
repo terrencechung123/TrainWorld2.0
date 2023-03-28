@@ -218,13 +218,13 @@ class TrainById(Resource):
             train,
             200)
     def delete(self, id):
-        ticket = Ticket.query.filter_by(id=id).first()
-        if not ticket:
+        train = Train.query.filter_by(id=id).first()
+        if not train:
             return make_response({
-                "error": "Ticket not found"
+                "error": "Train not found"
             }, 404)
 
-        db.session.delete(ticket)
+        db.session.delete(train)
         db.session.commit()
         return make_response({}, 204)
 api.add_resource(TrainById, "/trains/<int:id>")

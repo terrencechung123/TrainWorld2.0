@@ -9,7 +9,7 @@ function Login({ onLogin }) {
 
   return (
     <Wrapper>
-      <Logo>TrainWorld</Logo>
+      <Logo>Train World</Logo>
       {showLogin ? (
         <>
           <LoginForm onLogin={onLogin} />
@@ -40,7 +40,7 @@ function Login({ onLogin }) {
 const Logo = styled.h1`
   font-family: "Permanent Marker", cursive;
   font-size: 3rem;
-  color: deeppink;
+  color: #4E79D4;
   margin: 8px 0 16px;
 `;
 

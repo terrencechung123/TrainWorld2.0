@@ -48,7 +48,7 @@ const Wrapper = styled.header`
 const Logo = styled.h1`
   font-family: "Permanent Marker", cursive;
   font-size: 3rem;
-  color: deeppink;
+  color: #4E79D4;
   margin: 0;
   line-height: 1;
 

@@ -87,12 +87,6 @@ function NewTicket({ user }) {
           </FormField>
         </form>
       </WrapperChild>
-      <WrapperChild>
-        <h1>{price}</h1>
-        <p>
-          <cite>By {user.username}</cite>
-        </p>
-      </WrapperChild>
     </Wrapper>
   );
 }

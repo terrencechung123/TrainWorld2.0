@@ -29,7 +29,7 @@ function LoginForm({ onLogin }) {
   return (
     <form onSubmit={handleSubmit}>
       <FormField>
-        <Label htmlFor="username">Username</Label>
+        <Label htmlFor="username" style={{color: "#4E79D4"}}>Username</Label>
         <Input
           type="text"
           id="username"
@@ -39,7 +39,7 @@ function LoginForm({ onLogin }) {
         />
       </FormField>
       <FormField>
-        <Label htmlFor="password">Password</Label>
+        <Label htmlFor="password" style={{color: "#4E79D4"}}>Password</Label>
         <Input
           type="password"
           id="password"
@@ -63,4 +63,3 @@ function LoginForm({ onLogin }) {
 }
 
 export default LoginForm;
-

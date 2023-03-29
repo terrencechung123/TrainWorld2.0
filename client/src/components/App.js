@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import NavBar from "./Navbar";
 import Login from "../pages/Login";
 import TicketList from "../pages/TicketList";
@@ -13,6 +13,7 @@ import backgroundGif from "../images/background.gif";
 
 function App() {
   const [user, setUser] = useState(null);
+  const history = useHistory();
 
   useEffect(() => {
     // auto-login
@@ -23,7 +24,12 @@ function App() {
     });
   }, []);
 
-  if (!user) return <Login onLogin={setUser} />;
+  const handleLogin = (user) => {
+    setUser(user);
+    history.push('/tickets');
+  };
+
+  if (!user) return <Login onLogin={handleLogin} />;
 
   return (
     <AppWrapper>

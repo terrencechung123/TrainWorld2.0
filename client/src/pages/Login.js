@@ -3,6 +3,7 @@ import styled from "styled-components";
 import LoginForm from "../components/LoginForm";
 import SignUpForm from "../components/SignUpForm";
 import { Button } from "../styles";
+import backgroundGif from "../images/background.gif";
 
 function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
@@ -41,13 +42,31 @@ const Logo = styled.h1`
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
   color: #4E79D4;
-  margin: 8px 0 16px;
+  margin: 0;
 `;
 
 const Wrapper = styled.section`
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 16px;
+  height: 100vh;
+  background-image: url(${backgroundGif});
+  background-repeat: no-repeat;
+  background-size: cover; /* cover entire background */
+  background-position: center; /* center the image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  overflow: hidden; /* hide any overflow content, including the white border */
+
+  & > form {
+    position: relative;
+    width: 400px;
+    margin-top: 30px;
+  }
+
+  & > p {
+    color: #fff; /* change font color to white */
+  }
 `;
 
 const Divider = styled.hr`

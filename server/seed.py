@@ -31,7 +31,7 @@ with app.app_context():
         'Hi I\'m Paris Hilton and everytime I am not at home with my chihuahua I am sitting first Class in TrainWorld...Believe it or Not my first Selfie was in TrainWorld, and it changed the world forever.',
         'I am Keanu Reeves. I was in the matrix and I am also John Wick. TrainWorld is perfect and I love long rides in TrainWorld.',
         'Wassup Ya\'ll its Ice Spice and you\'re tuning into TrainWorld.  TrainWorld is my go to transporation system, the train system in the US is often overlooked and we should seriously look into the development of our modern railroad systems.',
-        'Before the day even started, when I saw TrainWorld I said TrainWorld is probably gonna be the #1 Train Transaction Service in America. I don\'t know what made me say that, but when I saw TrainWorld I said it might as well be #1 now.',
+        'Before the day even started, when I saw TrainWorld I said TrainWorld is probably gonna be the #1 Train Service in America. I don\'t know what made me say that, but when I saw TrainWorld I said it might as well be #1 now.',
         'When I am not at home with my family I am usually daydreaming about finally taking a trip to TrainWorld. TrainWorld has always been my dream as a little girl, and there is nothing I\'d love more than to go to TrainWorld. I\'m stuck in TrainWorld and I can\'t get out.',
         'Hey it\'s Selena Glomez and you\'re browsing TrainWorld! I\'m stuck inside TrainWorld and I can\'t get out! Lol',
         'When I am not busy being a Niche-Internet-Micro-Celebrity, best believe I am taking trips at TrainWorld! I\'m stuck in TrainWorld and I can\'t get out!',

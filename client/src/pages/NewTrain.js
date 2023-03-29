@@ -51,7 +51,7 @@ function NewTrain() {
         <h1 style={{ fontSize: "2rem", fontFamily: "'Press Start 2P', cursive" }}>Create Train</h1>
         <form onSubmit={handleSubmit}>
         <FormField>
-  <Label htmlFor="title" style={{ color: "#fff" }}>Title</Label>
+  <Label htmlFor="title" style={{ color: "black", fontSize:"1.5em" }}>Title</Label>
   <Input
     type="text"
     id="title"
@@ -60,7 +60,7 @@ function NewTrain() {
   />
 </FormField>
 <FormField>
-  <Label htmlFor="description" style={{ color: "#fff" }}>Description</Label>
+  <Label htmlFor="description" style={{ color: "black", fontSize:"1.5em" }}>Description</Label>
   <Input
     type="text"
     id="description"
@@ -69,7 +69,7 @@ function NewTrain() {
   />
 </FormField>
 <FormField>
-  <Label htmlFor="image" style={{ color: "#fff" }}>Image</Label>
+  <Label htmlFor="image" style={{ color: "black", fontSize:"1.5em" }}>Image</Label>
   <Input
     type="text"
     id="image"

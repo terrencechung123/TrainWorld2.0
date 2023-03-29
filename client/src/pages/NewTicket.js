@@ -49,7 +49,7 @@ function NewTicket({ user }) {
         <Heading>Create Ticket</Heading>
         <form onSubmit={handleSubmit}>
           <FormField>
-            <Label htmlFor="price" style={{ color: "#fff" }}>Price</Label>
+            <Label htmlFor="price" style={{ color: "black", fontSize:"1.5em" }}>Price</Label>
             <Input
               type="number"
               id="price"
@@ -58,7 +58,7 @@ function NewTicket({ user }) {
             />
           </FormField>
           <FormField>
-            <Label htmlFor="trainId" style={{ color: "#fff" }}>Train ID</Label>
+            <Label htmlFor="trainId" style={{ color: "black", fontSize:"1.5em" }}>Train ID</Label>
             <Input
               type="number"
               id="trainId"
@@ -67,7 +67,7 @@ function NewTicket({ user }) {
             />
           </FormField>
           <FormField>
-            <Label htmlFor="userId" style={{ color: "#fff" }}>User ID</Label>
+            <Label htmlFor="userId" style={{ color: "black", fontSize:"1.5em" }}>User ID</Label>
             <Input
               type="number"
               id="userId"

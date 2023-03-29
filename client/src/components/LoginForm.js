@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import { Button, Error, Input, FormField, Label } from "../styles";
+import styled from "styled-components";
+
+const CustomLabel = styled.label`
+  color: #4E79D4;
+  font-size: 1.5em;
+  font-family: 'Press Start 2P', cursive;
+`;
 
 function LoginForm({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -29,7 +36,7 @@ function LoginForm({ onLogin }) {
   return (
     <form onSubmit={handleSubmit}>
       <FormField>
-        <Label htmlFor="username" style={{color: "#4E79D4"}}>Username</Label>
+        <CustomLabel htmlFor="username">Username</CustomLabel>
         <Input
           type="text"
           id="username"
@@ -39,7 +46,7 @@ function LoginForm({ onLogin }) {
         />
       </FormField>
       <FormField>
-        <Label htmlFor="password" style={{color: "#4E79D4"}}>Password</Label>
+        <CustomLabel htmlFor="password">Password</CustomLabel>
         <Input
           type="password"
           id="password"

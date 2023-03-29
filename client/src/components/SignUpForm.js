@@ -116,6 +116,8 @@ const FormFields = styled.div`
 
 const WhiteLabel = styled(Label)`
   color: #4E79D4;
+  font-size: 1.5em; 
+  font-family: 'Press Start 2P', cursive;
 `;
 
 const WhiteInput = styled(Input)`

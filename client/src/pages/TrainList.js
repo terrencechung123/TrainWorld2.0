@@ -74,6 +74,7 @@ const Wrapper = styled.section`
 
 const Train = styled.article`
     margin-bottom: 24px;
+
 `;
 
 const Image = styled.img`

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import LoginForm from "../components/LoginForm";
 import SignUpForm from "../components/SignUpForm";
 import { Button } from "../styles";
-import backgroundGif from "../images/background.gif";
+import loginGif from "../images/loginGif.gif";
 
 function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
@@ -47,7 +47,7 @@ const Logo = styled.h1`
 
 const Wrapper = styled.section`
   height: 100vh;
-  background-image: url(${backgroundGif});
+  background-image: url(${loginGif});
   background-repeat: no-repeat;
   background-size: cover; /* cover entire background */
   background-position: center; /* center the image */

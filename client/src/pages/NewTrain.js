@@ -50,33 +50,34 @@ function NewTrain() {
       <WrapperChild>
         <h1 style={{ fontSize: "2rem", fontFamily: "'Press Start 2P', cursive" }}>Create Train</h1>
         <form onSubmit={handleSubmit}>
-          <FormField>
-            <Label htmlFor="title">Title</Label>
-            <Input
-                type="text"
-                id="title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-            />
-          </FormField>
-          <FormField>
-            <Label htmlFor="description">Description</Label>
-            <Input
-                type="text"
-                id="description"
-                value={description}
-                onChange={(e)=>setDescription(e.target.value)}
-            />
-          </FormField>
-          <FormField>
-            <Label htmlFor="image">Image</Label>
-            <Input
-                type="text"
-                id="image"
-                value={image}
-                onChange={(e)=>setImage(e.target.value)}
-            />
-          </FormField>
+        <FormField>
+  <Label htmlFor="title" style={{ color: "#fff" }}>Title</Label>
+  <Input
+    type="text"
+    id="title"
+    value={title}
+    onChange={(e) => setTitle(e.target.value)}
+  />
+</FormField>
+<FormField>
+  <Label htmlFor="description" style={{ color: "#fff" }}>Description</Label>
+  <Input
+    type="text"
+    id="description"
+    value={description}
+    onChange={(e)=>setDescription(e.target.value)}
+  />
+</FormField>
+<FormField>
+  <Label htmlFor="image" style={{ color: "#fff" }}>Image</Label>
+  <Input
+    type="text"
+    id="image"
+    value={image}
+    onChange={(e)=>setImage(e.target.value)}
+  />
+</FormField>
+
           {/* <FormField>
             <Label htmlFor="origin">Origin</Label>
             <Input

@@ -139,15 +139,19 @@ function NewTrain() {
 }
 
 const Wrapper = styled.section`
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 16px;
+  height: 100vh;
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const WrapperChild = styled.div`
-  flex: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -130%);
+    width: 400px;
 `;
 
 export default NewTrain;

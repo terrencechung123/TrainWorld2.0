@@ -67,7 +67,10 @@ const TrainList = () => {
 const Wrapper = styled.section`
     max-width: 800px;
     margin: 40px auto;
+    transform: translate(0, 7%);
 `;
+
+
 
 const Train = styled.article`
     margin-bottom: 24px;

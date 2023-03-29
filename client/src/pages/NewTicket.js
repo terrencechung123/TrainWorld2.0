@@ -46,7 +46,7 @@ function NewTicket({ user }) {
   return (
     <Wrapper>
       <WrapperChild>
-        <h1 style={{ fontSize: "2rem", fontFamily: "'Press Start 2P', cursive" }}>Create Ticket</h1>
+        <Heading>Create Ticket</Heading>
         <form onSubmit={handleSubmit}>
           <FormField>
             <Label htmlFor="price">Price</Label>
@@ -76,9 +76,7 @@ function NewTicket({ user }) {
             />
           </FormField>
           <FormField>
-            <Button color="primary" type="submit">
-              {isLoading ? "Loading..." : "Submit Ticket"}
-            </Button>
+            <StyledButton type="submit" isLoading={isLoading}>Submit Ticket</StyledButton>
           </FormField>
           <FormField>
             {errors.map((err) => (
@@ -92,15 +90,32 @@ function NewTicket({ user }) {
 }
 
 const Wrapper = styled.section`
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 16px;
+  height: 100vh;
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const WrapperChild = styled.div`
-  flex: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -130%);
+    width: 400px;
+`;
+
+const Heading = styled.h1`
+  font-size: 2rem;
+  font-family: 'Press Start 2P', cursive;
+  white-space: nowrap;
+`;
+
+const StyledButton = styled(Button)`
+  ${({ isLoading }) => isLoading && `
+    cursor: not-allowed;
+    opacity: 0.7;
+  `}
 `;
 
 export default NewTicket;

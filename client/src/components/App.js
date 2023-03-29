@@ -1,60 +1,3 @@
-// import React, { useEffect, useState } from "react";
-// import { Switch, Route } from "react-router-dom";
-// import NavBar from "./Navbar";
-// import Login from "../pages/Login";
-// import TicketList from "../pages/TicketList";
-// import NewTicket from "../pages/NewTicket";
-// import UpdateTicket from "../pages/UpdateTicket";
-// import UserList from "../pages/UserList";
-// import TrainList from "../pages/TrainList";
-// import NewTrain from "../pages/NewTrain";
-// import styled from "styled-components";
-
-// function App() {
-//   const [user, setUser] = useState(null);
-
-//   useEffect(() => {
-//     // auto-login
-//     fetch("/check_session").then((r) => {
-//       if (r.ok) {
-//         r.json().then((user) => setUser(user));
-//       }
-//     });
-//   }, []);
-
-//   if (!user) return <Login onLogin={setUser} />;
-
-//   return (
-//     <>
-//       <NavBar user={user} setUser={setUser} />
-//       <Main>
-//         <Switch>
-//           <Route path="/users">
-//             <UserList user={user}/>
-//           </Route>
-//           <Route path="/trains">
-//             <TrainList/>
-//           </Route>
-//           <Route path="/new_train">
-//             <NewTrain/>
-//           </Route>
-//           <Route path="/new_ticket">
-//             <NewTicket user={user} />
-//           </Route>
-//           <Route path="/update/:id/edit">
-//             <UpdateTicket user={user}/>
-//           </Route>
-//           <Route path="/tickets">
-//             <TicketList />
-//           </Route>
-//         </Switch>
-//       </Main>
-//     </>
-//   );
-// }
-
-// export default App;
-
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import NavBar from "./Navbar";
@@ -141,26 +84,4 @@ const AppWrapper = styled.div`
   opacity: 0.9;
 `;
 
-// const MainContainer = styled.main`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   background-image: url(${backgroundGif});
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center center;
-//   height: 100vh;
-//   width: 100vw;
-//   animation: ${animation} 20s linear infinite;
-//   background-attachment: scroll;
-// `;
-
-// const AppWrapper = styled.div`
-//   height: 100%;
-//   background-image: url(${backgroundGif});
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-attachment: scroll;
-//   opacity: 0.9;
-// `;
 export default App;

@@ -88,6 +88,7 @@ function TicketList() {
 const Wrapper = styled.section`
   max-width: 800px;
   margin: 40px auto;
+  transform: translate(0, 4.5%);
 `;
 
 const Ticket = styled.article`

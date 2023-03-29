@@ -1,6 +1,20 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
+import styled from "styled-components";
 import { Button, FormField, Input, Label } from "../styles";
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 3rem;
+`;
+
+const Heading = styled.h1`
+  font-size: 2rem;
+  font-family: 'Press Start 2P', cursive;
+`;
 
 function UpdateTicket({ user }) {
   const [trainId, setTrainId] = useState("");
@@ -57,8 +71,8 @@ function UpdateTicket({ user }) {
   }
   
   return (
-    <div>
-      <h1 style={{ fontSize: "2rem", fontFamily: "'Press Start 2P', cursive" }}>Edit Ticket</h1>
+    <Wrapper>
+      <Heading>Edit Ticket</Heading>
       <form onSubmit={handleSubmit}>
         <FormField>
           <Label htmlFor="price">Price:</Label>
@@ -104,7 +118,7 @@ function UpdateTicket({ user }) {
           </ul>
         )}
       </form>
-    </div>
+    </Wrapper>
   );
 }
 
